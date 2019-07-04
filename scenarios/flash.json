@@ -1,0 +1,25 @@
+{
+    "description": "flash with new software ",
+    "steps":
+    [
+      {
+        "case": "flash",
+        "params":
+        {
+          "frw_type":"spherical",
+          "mode"    :"make"
+        },
+        "logs" : "~/Desktop/test_logs/flash"
+      },
+
+      {
+        "case": "checker",
+        "params":
+
+        {
+          "TypeChecker"    : "FrwVersion"
+        }
+      }
+    ]
+}
+

@@ -1,0 +1,76 @@
+[
+  {
+    "description": "preview 5.6K 30 fps ",
+    "steps":
+    [
+      {
+        "case": "preview",
+        "params":
+          {
+          "shooting_mode" : "lcd",
+          "params_mode":
+          {
+            "fps"         : "30",
+            "stitch_mode" : "EAC",
+            "resolution"  : "5K"
+          },
+          "options_mode":
+          {
+            "eac_split"   : "disable",
+            "lrv"         : "enable",
+            "bypass"      : "enable",
+            "rear"        : "disable"
+          }
+        }
+      }
+    ]
+},
+  {
+    "description": "CO : dual not cropped ",
+    "steps":
+    [
+      {
+        "case": "still",
+        "params":
+        {
+          "shooting_mode"  : "dual",
+          "params_mode"    :
+           {
+             "fps"            : "30",
+             "submode"        : "CAL"
+           },
+          "options_mode" :
+          {
+            "flare"         : "0",
+            "flare_art"     : "",
+            "bypass"        : "disable",
+            "ring_low_res"  : "disable",
+            "dump_raw"      : "enable",
+            "raw_nbits"     : "16",
+            "bayer_width"   : "4056",
+            "mpx"           : "12MP",
+            "debug_dump"    : "disable"
+
+          }
+        },
+        "logs" : "~/Desktop/status/functional/C0/serials"
+      },
+            {
+      "case": "reset",
+      "params":
+      {
+        "option": "soft"
+      }
+      },
+      {
+        "case": "checker",
+        "params":
+        {
+          "out_directory"  : "~/Desktop/status/functional/C0/photos",
+          "TypeChecker"    : "PhotoStat"
+        }
+      }
+
+    ]
+}
+]

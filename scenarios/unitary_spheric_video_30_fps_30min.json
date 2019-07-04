@@ -1,0 +1,70 @@
+[
+  {
+    "description": "preview 5.6K 30 fps ",
+    "steps":
+    [
+      {
+        "case": "preview",
+        "params":
+          {
+          "shooting_mode" : "lcd",
+          "params_mode":
+          {
+            "fps"         : "30",
+            "stitch_mode" : "EAC",
+            "resolution"  : "5K"
+          },
+          "options_mode":
+          {
+            "eac_split"   : "disable",
+            "lrv"         : "enable",
+            "bypass"      : "enable",
+            "rear"        : "disable"
+          }
+        }
+      }
+    ]
+},
+{
+    "description": "record video with 5.6K 30 fps ",
+    "steps":
+    [
+      {
+        "case": "video",
+        "params":
+        {
+          "shooting_mode"         : "spherical",
+          "options_mode" :
+          {
+            "flare"               : "0",
+            "flare_art"           : "identity",
+            "flare_fake"          : "disable",
+            "flare_fake_time"     : "2",
+            "flare_art_front_corr": "60",
+            "bypass"              : "enable",
+            "run_time"            : "1800",
+            "debug_dump"          : "disable",
+            "debug_dump_opt"      : "yuv,data",
+            "ring_high_res"       : "enable",
+            "stab"                : "disable",
+            "spher_eis"           : "0",
+            "stab_degree"         : "0.7",
+            "exposure"            : "enable"
+          }
+        },
+        "logs" : "~/Desktop/status/unitary/v30/30_min/serials"
+      },
+
+      {
+        "case": "checker",
+        "params":
+        {
+          "out_directory"  : "~/Desktop/status/unitary/v30/30_min/videos",
+          "TypeChecker"    : "VideoStat"
+        }
+      }
+
+    ]
+}
+
+]

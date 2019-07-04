@@ -1,0 +1,79 @@
+[{
+    "description": "preview 5.6K 30 fps ",
+    "steps":
+    [
+      {
+        "case": "preview",
+        "params":
+          {
+          "shooting_mode" : "lcd",
+          "params_mode":
+          {
+            "fps"         : "30",
+            "stitch_mode" : "EAC",
+            "resolution"  : "5K"
+          },
+          "options_mode":
+          {
+            "eac_split"   : "disable",
+            "lrv"         : "enable",
+            "bypass"      : "enable",
+            "rear"        : "disable"
+          }
+        }
+      }
+    ]
+},
+  {
+    "description": "still pano ",
+    "steps":
+    [
+      {
+        "case": "still",
+        "params":
+        {
+          "shooting_mode"  : "spherical",
+          "params_mode"    :
+           {
+             "fps"            : "30",
+             "submode"        : "PANO",
+             "stitch_mode"    : "ERP",
+             "resolution"     : "6K"
+
+           },
+          "options_mode" :
+          {
+            "flare"         : "0",
+            "flare_art"     : "",
+            "bypass"        : "disable",
+            "ring_low_res"  : "disable",
+            "dump_raw"      : "disable",
+            "raw_nbits"     : "16",
+            "bayer_width"   : "4056",
+            "mpx"           : "6MP",
+            "debug_dump"    : "disable",
+            "rear"          : "disable"
+
+          }
+        },
+        "logs" : "~/Desktop/status/functional/still_pano/serials"
+      },
+            {
+      "case": "reset",
+      "params":
+      {
+        "option": "soft"
+      }
+      },
+      {
+        "case": "checker",
+        "params":
+        {
+          "out_directory"  : "~/Desktop/status/functional/still_pano/photos",
+          "TypeChecker"    : "PhotoStat"
+        }
+      }
+
+    ]
+}
+]

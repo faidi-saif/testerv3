@@ -1,0 +1,37 @@
+{
+    "descriptienable": "take photo with ... ",
+    "steps":
+    [
+      {
+        "case"                        : "still",
+        "params":
+        {
+          "shooting_mode"             : "non_spherical",
+          "params_mode":
+           {
+             "fps"                    : "24,25,30,60",
+             "mpx"                    : "12MP,18MP",
+             "submode"                : "PANO,BURST,NORMAL"
+           },
+          "options_mode":
+          {
+            "flare"                   : "1",
+            "flare_art"               : "randon,strong,lite,identity",
+            "flare_fake"              : "disable,enable",
+            "flare_fake_time"         : "0",
+            "flare_art_front_corr"    : "50",
+            "bypass"                  : "enable,disable",
+            "ring_high_res"           : "enable,disable",
+            "dump_raw"                : "enable,disable",
+            "raw_nbits"               : "16",
+            "bayer_width"             : "4056",
+            "debug_dump"              : "enable,disable",
+            "debug_dump_opt"          : "yuv,data",
+            "rear"                    : "enable,disable"
+          }
+        }
+      }
+
+    ]
+}
+

@@ -1,0 +1,33 @@
+{
+    "description": "record video with ... ",
+    "steps":
+    [
+      {
+        "case": "video",
+        "params":
+        {
+          "shooting_mode"         : "non_spherical",
+          "options_mode" :
+          {
+            "flare"               : "0",
+            "flare_art"           : "",
+            "flare_fake"          : "",
+            "flare_fake_time"     : "",
+            "flare_art_front_corr": "",
+            "bypass"              : "enable",
+            "run_time"            : "10",
+            "debug_dump"          : "enable",
+            "debug_dump_opt"      : "yuv,data",
+            "ring_high_res"       : "enable",
+            "stab"                : "enable",
+            "stab_degree"         : "5",
+            "exposure"            : "enable",
+            "rear"                : "enable",
+            "spher_eis"           : "disable"
+          }
+        }
+      }
+
+    ]
+}
+

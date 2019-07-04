@@ -1,0 +1,16 @@
+[
+{
+  "description": "reset : soft",
+  "steps":
+  [
+    {
+      "case": "reset",
+      "params":
+      {
+        "option": "soft"
+      },
+      "logs" : "~/Desktop/test_logs/reset"
+    }
+  ]
+}
+]

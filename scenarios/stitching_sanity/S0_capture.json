@@ -1,0 +1,51 @@
+{
+    "description": "S0 : 6K ERP 30fps ",
+    "steps":
+    [
+      {
+        "case": "still",
+        "params":
+        {
+          "shooting_mode"  : "spherical",
+          "params_mode"    :
+           {
+             "fps"            : "30",
+             "stitch_mode"    : "ERP",
+             "resolution"     : "6K"
+           },
+          "options_mode" :
+          {
+            "flare"         : "0",
+            "flare_art"     : "",
+            "bypass"        : "disable",
+            "ring_low_res"  : "disable",
+            "dump_raw"      : "disable",
+            "raw_nbits"     : "16",
+            "bayer_width"   : "3008",
+            "debug_dump"    : "disable",
+            "debug_dump_opt": "",
+            "mpx"           : "18MP"
+
+          }
+        },
+        "logs" : "~/Desktop/test_logs/S0/serials"
+      },
+      {
+      "case": "reset",
+      "params":
+      {
+        "option": "soft"
+      }
+      },
+      {
+        "case": "checker",
+        "params":
+        {
+          "out_directory"  : "~/Desktop/test_logs/S0/photos",
+          "TypeChecker"    : "PhotoStat"
+        }
+      }
+
+
+    ]
+}

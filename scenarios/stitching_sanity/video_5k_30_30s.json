@@ -1,0 +1,50 @@
+{
+    "description": "record video with 5.6K 30 fps 30s ",
+    "steps":
+    [
+      {
+        "case": "video",
+        "params":
+        {
+          "shooting_mode"         : "spherical",
+          "options_mode" :
+          {
+            "flare"               : "0",
+            "flare_art"           : "identity",
+            "flare_fake"          : "disable",
+            "flare_fake_time"     : "2",
+            "flare_art_front_corr": "60",
+            "bypass"              : "enable",
+            "run_time"            : "30",
+            "debug_dump"          : "disable",
+            "debug_dump_opt"      : "yuv,data",
+            "ring_high_res"       : "enable",
+            "stab"                : "disable",
+            "spher_eis"           : "0",
+            "stab_degree"         : "0.7",
+            "exposure"            : "enable"
+          }
+        },
+        "logs" : "~/Desktop/test_logs/V0/30/serials"
+      },
+
+      {
+      "case": "reset",
+      "params":
+      {
+        "option": "soft"
+      }
+      },
+
+      {
+        "case": "checker",
+        "params":
+        {
+          "out_directory"  : "~/Desktop/test_logs/V0/30/videos",
+          "TypeChecker"    : "VideoStat"
+        }
+      }
+
+    ]
+}
+
