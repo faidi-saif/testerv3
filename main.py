@@ -1,4 +1,4 @@
-
+from config import *
 from camera import Camera
 from grid import Grid
 from vcamera import Vcamera
@@ -14,17 +14,20 @@ parser          = argparse.ArgumentParser()
 
 args            = parser.parse_args()
 
-grid            = Grid(arg_host_ip = "192.168.0.1",arg_host_http_path = '/var/www/html')
+grid            = Grid(arg_host_ip = computer_host_ip,arg_host_http_path = computer_http_path)
 
-hard_cam        = Camera(username = 'root',host_ip = '192.168.0.202',ssh_passwd = '',web_port = 8042,arduino_port = '/dev/ARDUINO',linux_port = '/dev/LINUX',rtos_port = '/dev/RTOS',grid = grid ,control_mode= 'complete' )
+hard_cam        = Camera(username = camera_user_name,host_ip = camera_ip,ssh_passwd = '',web_port = camera_web_port,arduino_port = arduino_serial_port
+                         ,linux_port = camera_linux_port,rtos_port = camera_rtos_port,grid = grid ,control_mode= control_mode )
 
-vcam            = Vcamera(hard_cam,'spherical')
+vcam            = Vcamera(hard_cam,camera_type)
 
 sce_runner      = ScenarioRunner(vcam)
 
 sc_gen          = ScenarioGenerator()
 
 stat_indicator  = StatIndicator(sce_runner,sc_gen)
+
+#sce_runner.run_test('./scenarios/flash.json','~/Desktop/flash_res.json')
 
 stat_indicator.run_status()
 

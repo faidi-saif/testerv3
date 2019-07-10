@@ -267,7 +267,7 @@ class Vcamera :
 # f ={'fps': '25', 'res': '5.6K', 'flare': '1000'}
 # vcam.take_photo(f)
 
-import time
+
 # from grid import  Grid
 # from camera import Camera
 # grid= Grid(arg_host_ip = "192.168.0.1",arg_host_http_path = '/var/www/html')

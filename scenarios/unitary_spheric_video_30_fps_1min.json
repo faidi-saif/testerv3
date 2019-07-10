@@ -18,7 +18,7 @@
           {
             "eac_split"   : "disable",
             "lrv"         : "enable",
-            "bypass"      : "enable",
+            "bypass"      : "disable",
             "rear"        : "disable"
           }
         }

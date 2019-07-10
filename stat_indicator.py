@@ -28,8 +28,8 @@ class StatIndicator:
         self.result         = []
         self.functional     = \
                           [
-                            {   'in': './scenarios/still_pano.json' ,                  'out': '~/Desktop/status/functional/still_pano/func_still_pano.json'    },
-                            {   'in': './scenarios/S0.json',                           'out': '~/Desktop/status/functional/S0/func_still_S0.json'              },
+                            #{   'in': './scenarios/still_pano.json' ,                  'out': '~/Desktop/status/functional/still_pano/func_still_pano.json'    },
+                            #{   'in': './scenarios/S0.json',                           'out': '~/Desktop/status/functional/S0/func_still_S0.json'              },
                             # {   'in': './scenarios/C0.json',                           'out': '~/Desktop/status/functional/C0/func_still_C0.json'              },
                             # {   'in': './scenarios/func_spheric_video_30_fps.json',    'out': '~/Desktop/status/functional/v30/func_spheric_video_30_fps.json' },
                             # {   'in': './scenarios/func_spheric_video_25_fps.json',    'out':'~/Desktop/status/functional/v25/func_spheric_video_25_fps.json'  },
@@ -40,13 +40,13 @@ class StatIndicator:
 
         self.unitary    = [
                             {'in': './scenarios/unitary_spheric_video_30_fps_1min.json',  'out': '~/Desktop/status/unitary/v30/1_min/unitary_spheric_video_30_fps_1min.json' },
-                            {'in': './scenarios/unitary_spheric_video_30_fps_10min.json', 'out': '~/Desktop/status/unitary/v30/10_min/unitary_spheric_video_30_fps_1min.json'},
+                            #{'in': './scenarios/unitary_spheric_video_30_fps_10min.json', 'out': '~/Desktop/status/unitary/v30/10_min/unitary_spheric_video_30_fps_1min.json'},
                             # {'in': './scenarios/unitary_spheric_video_30_fps_30min.json','out': '~/Desktop/status/unitary/v30/30_min/unitary_spheric_video_30_fps_1min.json'},
                           ]
 
 
         self.robustess  = [
-                            {'in': '~/Desktop/status/robustness/robus1/robustness1.json','out': '~/Desktop/status/robustness/robus1/result_robustness1.json','sc':'pano'},
+                            #{'in': '~/Desktop/status/robustness/robus1/robustness1.json','out': '~/Desktop/status/robustness/robus1/result_robustness1.json','sc':'pano'},
                             # {'in': '~/Desktop/status/robustness/robus2/robustness2.json','out': '~/Desktop/status/robustness/robus2/result_robustness2.json','sc':'v25'}
                           ]
 

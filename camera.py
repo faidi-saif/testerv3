@@ -198,7 +198,7 @@ class Camera :
             #print('../../../../admin/host_tools/gen/remote_flash.sh {} {}'.format(cam_ip,binary_file))
             os.system('../../../../admin/host_tools/gen/remote_flash.sh {} {}'.format(cam_ip,binary_file))
             #/waf_build/spherical/build/eaglepeak/sd_fwupdate/DATA.bin
-            time.sleep(4)
+            time.sleep(6)
             self.soft_reset()
         else:
             pass

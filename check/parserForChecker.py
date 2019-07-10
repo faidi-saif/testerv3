@@ -17,6 +17,10 @@ class ParserForChecker(Parser):
         #self.encode_format      = re.compile(r'\s+(.*)\s+\(\w'),1
         self.color_format       = re.compile(r'\s+(.*)\('),1
         self.video_pattern      = re.compile('Video:(.*)\n'),1
+        self.errors             = re.compile('Library closed with (\d+)'),1
+        self.skipped_frames     = re.compile('errors and (\d+) skipped frames'),1
+
+
 
 
 
@@ -33,6 +37,8 @@ class ParserForChecker(Parser):
                or arg_info == 'encode_format'
                or arg_info == 'color_format'
                or arg_info == 'resolution'
+               or arg_info == 'skipped_frames'
+               or arg_info == 'errors'
                or arg_info == 'video_pattern')\
             ,'invalid information to search for , add implementation for : {} in {}'.format(arg_info,__class__.__name__)
         if arg_info  == 'video_duration':
@@ -47,6 +53,10 @@ class ParserForChecker(Parser):
             pattern,group = self.color_format
         elif arg_info == 'video_pattern':
             pattern,group = self.video_pattern
+        elif arg_info =='skipped_frames':
+            pattern,group = self.skipped_frames
+        elif arg_info == 'errors':
+            pattern,group = self.errors
         else : # frame rate (fps)
             pattern, group = self.frame_rate_pattern
 
@@ -55,3 +65,6 @@ class ParserForChecker(Parser):
         return match_string
 
 
+# p = ParserForChecker()
+# ret = p.search_pattern('*** Library closed with 1 errors and 5 skipped frames *** ','errors')
+# print (ret)

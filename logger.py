@@ -18,6 +18,14 @@ class Logger:
         file.write(arg_data)
         self.close(file)
 
+    # ---------------------------------------------------read ------------------------------------------------
+    def read(self,arg_path):
+        path = self.check_format(arg_path)
+        with open (path) as f:
+            data = f.read()
+        f.close()
+        return data
+
     # ---------------------------------------------- ------------------------------------------
     def close(self,arg_file):
        arg_file.close()
@@ -120,6 +128,11 @@ class Logger:
                 f.write("%s\n" % '')
                 for el in item:
                     f.write("%s" % el)
+
+
+
+
+
 
 # l.clean_dir('/home/saif/Desktop/test_logs/S0')
 

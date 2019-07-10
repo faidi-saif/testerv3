@@ -1,8 +1,9 @@
 from network.serializer import *
 from network.arduinoOptions import *
+from config import power_control_device_serial_num
 import os
 
-device_serial = 'YKa1184'
+device_serial = power_control_device_serial_num
 
 class ArduinoSerializer(Serializer):
 
